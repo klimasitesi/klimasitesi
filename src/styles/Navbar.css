@@ -1,0 +1,338 @@
+.navbar {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  border-bottom: 1px solid #e6e6e6;
+  padding: 0 40px;
+  position: relative;
+  box-sizing: border-box; 
+    
+}
+
+.navbar .main {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 150px;
+    justify-content: space-between;
+}
+
+.navbar .mainLink {
+    margin-left: auto;
+    margin-right: 50px;
+}
+
+.navbar .main img {
+    margin-right: auto;
+    height: 60px;
+}
+
+.navbar a {
+  color: black;
+  text-decoration: none;
+  margin-right: 20px;
+  transition: color 0.3s ease;
+}
+
+.navbar-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 25px;
+}
+
+.navbar a:hover {
+  color: #007bff !important; /* hover rengi kesinlikle uygula */
+}
+
+.navbar .main a:hover {
+  color: #007bff;
+}
+
+.navbar a.active {
+  color: #007bff;
+  font-weight: 600;
+  border-bottom: 2px solid #007bff;
+}
+
+.navbar .rightSide button {
+    background-color: transparent;
+    border: none;
+    color: black; /* beyaz arka planda görünür olması için white -> black */
+    cursor: pointer;
+}
+
+.navbar .main svg {
+    font-size: 40px;
+}
+
+.navbar-mobile-contact{
+    display:none;
+}
+
+
+/* Responsive (mobil uyumlu) */
+@media screen and (max-width: 600px) {
+    .navbar .main {
+        padding-left: 0 !important; /* !important yanlış yerdeydi */
+    }
+
+    .navbar .main a {
+        font-size: 13px;
+    }
+
+    .navbar .mainLink {
+        margin: 0;
+    }
+}
+
+.contact-info{
+    margin-top: 6px;
+    border:1px solid #e6e6e6;
+    border-radius: 7px;
+
+}
+.contact-info:hover {
+  color: #007bff;
+}
+
+
+.navbar {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  border-bottom: 1px solid #e6e6e6;
+  padding: 0 40px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+/* === Ana içerik === */
+.navbar .main {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* === Sol logo === */
+.navbar .main img {
+  height: 60px;
+  margin-right: auto;
+}
+
+/* === Orta menü (ortalanmış) === */
+.navbar-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 25px;
+}
+
+/* === Sağ iletişim alanı === */
+.navbar-right {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* === Linkler === */
+.navbar a {
+  color: black;
+  text-decoration: none;
+  margin-right: 20px;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #007bff !important;
+}
+
+.navbar a.active {
+  color: #007bff;
+  font-weight: 600;
+  border-bottom: 2px solid #007bff;
+}
+
+/* === Telefon & Mail kutuları === */
+.contact-info {
+  margin-top: 6px;
+  border: 1px solid #e6e6e6;
+  border-radius: 7px;
+  padding: 4px 10px;
+}
+
+.contact-info:hover {
+  color: #007bff;
+}
+
+/* ==========================================
+   📱 RESPONSIVE TASARIM
+   ========================================== */
+@media screen and (max-width: 992px) {
+  .navbar {
+    padding: 0 20px;
+  }
+
+  .navbar-center {
+    gap: 15px;
+  }
+
+  .contact-info {
+    font-size: 14px;
+    padding: 3px 8px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    height: auto;
+    padding: 10px 20px;
+    justify-content: space-between;
+  }
+
+  .navbar .main {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    justify-content: space-between;
+  }
+
+ 
+  .navbar .main img {
+    height: 50px;
+    margin-bottom: 10px;
+    justify-items: left;
+  }
+
+  .navbar-center {
+    position: static;
+    transform: none;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+  }
+
+  .navbar a {
+    margin: 5px 0;
+  }
+
+  .contact-info {
+    width: 100%;
+    text-align: center;
+    
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .navbar {
+    padding: 10px;
+  }
+
+  .navbar-center {
+    gap: 8px;
+  }
+
+  .navbar a {
+    font-size: 14px;
+  }
+
+  .contact-info {
+    font-size: 13px;
+    padding: 2px 6px;
+  }
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* ===========================
+   📱 Mobil Görünüm
+   =========================== */
+@media screen and (max-width: 768px) {
+  .navbar {
+    padding: 10px 20px;
+
+  }
+
+  /* Menü ikonunu göster */
+  .menu-icon {
+    display: flex;
+    
+  }
+
+  /* Menü ve sağ kısım varsayılan olarak gizli */
+  .navbar-center,
+  .navbar-right {
+    display: none;
+  }
+
+  /* Menü açıldığında görünsün */
+  .menu-toggle:checked ~ .navbar-center {
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    position: absolute;
+    top: 120px; /* logonun ve ikonun altına gelsin */
+    left: 0;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
+    gap: 15px;
+    z-index: 99;
+    text-align: center;
+  }
+
+  .navbar-center .link {
+    font-size: 18px;
+
+  }
+
+  
+}
+
+@media screen and (max-width: 768px) {
+  .menu-icon {
+    display: block;
+    position: absolute;
+    left: 15px;   /* sola hizala */
+    top: 60px;    /* dikey konum */
+    z-index: 100; /* diğerlerinin üstünde kalsın */
+    
+  }
+
+   .desktop-contact {
+    display: none;
+  }
+
+   .desktop-contact {
+    display: flex;
+  }
+  
+ 
+}
+
+  
+
